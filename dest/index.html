@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles/style.css">
+	<script src="js/index.js"></script>
+	<script>
+
+	</script>
+</head>
+<body>
+<div class="popup-register">
+	<p></p>
+</div>
+
+<div class="unauthorized-screen">
+	<header class="header">
+		<h1 class="header__logo">
+			MyPhoneBook
+		</h1>
+	</header>
+	<div class="row">
+		<div class="row__col row-authorization">
+			<div class="form">
+				<div class="form login-form">
+					<div class="form__body">
+						<div class="form__control">
+							<!-- <label for="login_user_login">Login</label> -->
+							<input type="text" class="input" id="login_user_login" value="" placeholder="Ваш логин">
+						</div>
+						<div class="form__control">
+							<!-- <label for="login_user_password">Password</label> -->
+							<input type="password" class="input" id="login_user_password" value="" placeholder="Пароль" >
+						</div>
+
+						<div class="form__control">
+							<button type="submit" class="btn btn_success">Войти в учетную запись</button>
+						</div>
+						<div class="form__control">
+							<button type="text" class="btn btn_register_show">Создать учетную запись</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row__col row-register">
+			<div class="form register-form">
+				<div class="form__header">
+					Создать учетную запись
+				</div>
+				<button class="btn btn_closed"></button>
+				<div class="form__body">
+					<div class="form__control">
+<!--						<label for="register_user_login">Login</label>-->
+						<input type="text" class="input" id="register_user_login" placeholder="Логин" value="" required >
+					</div>
+					<div class="form__control">
+<!--						<label for="register_user_password">Password</label>-->
+						<input type="text" class="input" id="register_user_password" placeholder="Пароль" value="" required >
+					</div>
+					<div class="form__control">
+<!--						<label for="register_user_born">Birth day</label>-->
+						<input type="text" class="input" id="register_user_born" placeholder="Дата рождения" value="" required >
+					</div>
+					<button class="btn btn_success">Зарегистрироваться</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="contactBook">
+	<div class="contactBook__header contactBook-header">
+		<h2 class="contactBook-header__title">
+			Пользователь <span class="contactBook-header__user">User</span>
+		</h2>
+		<button class="contactBook-header__exit">Выход</button>
+	</div>
+
+	<div class="contactBook__list contactBook-list">
+		<h3 class="contactBook-list__title">
+			Список контактов
+		</h3>
+		<div class="contactBook-list__list">
+			<ul class="contactBook-list__items">
+				<li class="contactBook-list__item contactBook-item">
+					<button class="contactBook-item__button"></button>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="contactBook__about contactBook-about">
+<!--		<div class="contactBook-about__content">-->
+<!--			<p class="contactBook-content__name">-->
+<!--				Имя: <span>Valera</span>-->
+<!--			</p>-->
+<!--			<p class="contactBook-content__contact">-->
+<!--				Телефон: <a href="tel:+74951111111">+7 (495) 111-11-11</a>-->
+<!--			</p>-->
+<!--			<p class="contactBook-content__contact">-->
+<!--				Почта: <a href="mailto:example@gmail.com">example@gmail.com</a>-->
+<!--			</p>-->
+<!--		</div>-->
+<!--		<button class="contactBook-about__exit">Закрыть</button>-->
+	</div>
+
+	<div class="contactBook__add contactBook-add">
+		<div class="contactBook-add__form">
+			<h3 class="contactBook-add__title">
+				Добавить контакт
+			</h3>
+			<div class="contactBook-add__control">
+<!--				<label for="contactBook-add__name">Имя</label>-->
+				<input type="text" class="contactBook-add__name input" id="contactBook-add__name" placeholder="Введите имя">
+			</div>
+			<div class="contactBook-add__control">
+				<select class="select contactBook-add__select input">
+					<option value="phone">телефон</option>
+					<option value="email">электронная почта</option>
+				</select>
+			</div>
+			<div class="contactBook-add__control">
+				<input type="text" class="contactBook-add__phone input" id="contactBook-add__phone" placeholder="Введите телефон">
+				<input type="text" class="contactBook-add__mail input" id="contactBook-add__mail" placeholder="Введите почту">
+			</div>
+			<button class="btn contactBook-add__btn">Добавить контакт</button>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

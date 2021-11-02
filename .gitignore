@@ -1,0 +1,5 @@
+.idea
+other/
+*.mp4
+package-lock.json
+node_modules/

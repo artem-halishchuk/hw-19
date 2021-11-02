@@ -1,0 +1,397 @@
+html,
+body {
+  border: 0;
+  font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+div,
+span,
+object,
+iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cit,
+code,
+del,
+dfn,
+em,
+ins,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table caption,
+table th,
+table td {
+  text-align: left;
+  vertical-align: middle;
+}
+a img {
+  border: 0;
+}
+:focus {
+  outline: 0;
+}
+li {
+  list-style-type: none;
+  /* Убираем маркеры */
+}
+* {
+  box-sizing: border-box;
+}
+h1 {
+  color: #4d6792;
+}
+html {
+  color: black;
+  font-family: 'Tahoma', sans-serif;
+  font-size: 10px;
+  /*background-color: #f7f6f5;*/
+}
+header {
+  display: flex;
+  justify-content: center;
+  font-size: 3.5rem;
+  margin-top: 20px;
+}
+.unauthorized-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.row {
+  /*flex-grow: 1;*/
+  /*width: 360px;*/
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+.row__col {
+  flex-grow: 1;
+  padding: 20px;
+}
+.form .form__header {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+.unauthorized-screen {
+  /*display: none;*/
+}
+.contactBook {
+  display: none;
+}
+.contactBook__title,
+.contactBook__list,
+.contactBook__about,
+.contactBook__add {
+  border: 1px solid black;
+  margin-bottom: 2px;
+}
+.contactBook {
+  display: none;
+  /*display: grid;*/
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "header header header" "list about add";
+}
+.contactBook__header {
+  grid-area: header;
+}
+.contactBook__list {
+  grid-area: list;
+}
+.contactBook__about {
+  grid-area: about;
+  display: none;
+}
+.contactBook__add {
+  grid-area: add;
+}
+/*-------------------*/
+.row-register {
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(65, 72, 85, 0.73);
+  /*opacity: 0;*/
+}
+.register-form,
+.form__body {
+  background-color: #f1f1f1;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.register-form {
+  position: relative;
+}
+.btn_closed {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background-color: transparent;
+  background-image: url("./img/closed_1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 26px;
+  height: 26px;
+  border-radius: 5px;
+}
+.form__header {
+  font-size: 2.1rem;
+  margin-top: 10px;
+  display: inline-flex;
+  justify-content: space-between;
+}
+.popup-register {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 2.5rem;
+  text-align: center;
+  background-color: rgba(65, 72, 85, 0.73);
+  opacity: 0;
+}
+.animationPopUp {
+  animation: popUp 2s;
+  display: block;
+  z-index: 2;
+}
+.row-register-show {
+  animation: block1;
+}
+@keyframes popUp {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes block1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes none {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.popup-register > p {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 120px;
+  padding: 30px;
+  width: 320px;
+  background-color: #cccccc;
+  left: calc(50% - 160px);
+}
+/*-------------------*/
+.row-authorization {
+  /*border: 1px solid black;*/
+  /*border-radius: 10px;*/
+}
+.login-form .input,
+.register-form .input,
+.input {
+  width: 290px;
+  height: 44px;
+  border-radius: 10px;
+  margin: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 4px;
+  font-size: 2rem;
+}
+.btn_register_show,
+.btn_success {
+  width: 280px;
+}
+.btn_success {
+  margin-top: 12px;
+}
+.btn_register_show {
+  font-weight: 400;
+  width: 240px;
+  padding: 2px;
+}
+button {
+  font-size: 1.7rem;
+  font-weight: 700;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  padding: 6px;
+  margin-bottom: 20px;
+}
+button:hover {
+  border: 2px solid #919b9e;
+  background-color: rgba(191, 197, 201, 0.82);
+}
+.login-form .form__body {
+  padding: 14px 24px 0 24px;
+}
+.login-form .form__body {
+  border: 1px solid black;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 50px -29px rgba(34, 60, 80, 0.58);
+  background-color: rgba(228, 231, 232, 0.11);
+}
+.input:focus,
+button:focus {
+  border: 2px solid #919b9e;
+}
+.input:hover {
+  border: 2px solid #585d5f;
+}
+/*---------------------------*/
+.contactBook {
+  padding: 20px;
+  font-size: 2rem;
+}
+.contactBook__header {
+  display: flex;
+  justify-content: space-between;
+}
+.contactBook-header__title {
+  font-size: 2rem;
+}
+.contactBook-list__title {
+  text-align: center;
+}
+.contactBook-list__list {
+  margin-top: 10px;
+}
+.contactBook__list,
+.contactBook__about,
+.contactBook__add {
+  padding: 10px;
+}
+.contactBook-list__items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.contactBook-list__item button {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.contactBook__about {
+  position: relative;
+}
+.contactBook-about__exit {
+  margin: 0;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.contactBook-add__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
