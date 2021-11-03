@@ -5,8 +5,9 @@ let browserify = require('gulp-browserify');
 let browserSync = require('browser-sync');
 let clean = require('gulp-clean');
 
-gulp.task('clean', function() {
-    gulp.src('./dest').pipe(clean())
+gulp.task('clean', function(c) {
+    gulp.src('./dest').pipe(clean());
+    return  c();
 })
 gulp.task('js', () => gulp.src('src/js/index.js')
     .pipe(browserify({
@@ -51,5 +52,7 @@ gulp.task('sync', () => {
 })
 
 gulp.task('build-sync', gulp.series('build', 'sync'));
+//gulp.task('build-sync', gulp.series('clenn-build', 'sync'));
 
+//gulp.task('default',gulp.parallel('build-sync', 'watch'));
 gulp.task('default',gulp.parallel('build-sync', 'watch'));
